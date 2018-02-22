@@ -1,7 +1,7 @@
 var express     = require('express'),
- path        = require('path'),
- bodyParser  = require('body-parser'),
- app         = module.exports = express();
+ path           = require('path'),
+ bodyParser     = require('body-parser'),
+ app            = module.exports = express();
 
 app.use(bodyParser.json());
 

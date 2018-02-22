@@ -7,6 +7,7 @@ resContract.deployed().then(function (instance){
 });
 
 module.exports = function (app) {
+    //List all availabilities
     app.get('/viewAvailabilities', function(req, res) {
         availabilityContract.listAvailabilitiesOverview()
         .then( (result) => {
@@ -32,6 +33,7 @@ module.exports = function (app) {
         })
     });
 
+    //show details of one availability
     app.get('/availability/:nbr', function(req, res) {
         var id = req.params.nbr;
 
@@ -54,9 +56,30 @@ module.exports = function (app) {
         })
     });
 
+    //add one availability
     app.post('/addAvailability', function(req, res) {
-        console.log (req);
-        availabilityContract.publishAvailability(0, 0, 0, 0, 0, 0, 0, "test")
+        var body = req.body;
+        var metadata  = body.metadata ? body.metadata : "",
+        type          = body.type ? body.type : 0,
+        min_deposit   = body.min_deposit ? body.min_deposit : 0,
+        commission    = body.commission ? body.commission : 0,
+        cancelDate    = body.cancelDate ? body.cancelDate : 0,
+        startDate     = body.startDate ? body.startDate : 0,
+        endDate       = body.endDate ? body.endDate : 0,
+        bookingStatus = body.status ? body.status : 0;
+
+
+
+        availabilityContract.publishAvailability(
+            type,
+            min_deposit,
+            commission,
+            cancelDate,
+            startDate,
+            endDate,
+            bookingStatus,
+            metadata
+        )
         .then( (result) => {
             res.send(result);
         }).catch ((err) => {
