@@ -929,7 +929,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 883,
+                              "referencedDeclaration": 1105,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -991,7 +991,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 880,
+                                          "referencedDeclaration": 1102,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -1052,7 +1052,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 883,
+                              "referencedDeclaration": 1105,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1244,7 +1244,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 880,
+                                      "referencedDeclaration": 1102,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1461,14 +1461,9 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x0d8cc4b8d15d4c3ef1d70af0071376fb26b5669b"
-    },
-    "1519288253685": {
-      "events": {},
-      "links": {},
-      "address": "0x53ea4f87693ad789317750d9eec9f035a669aa24"
+      "address": "0x13274fe19c0178208bcbee397af8167a7be27f6f"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-22T08:31:34.448Z"
+  "updatedAt": "2018-02-22T13:35:51.523Z"
 }
